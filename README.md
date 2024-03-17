@@ -1,4 +1,4 @@
-javascript:(function(){
+```javascript:(function(){
     var frame = document.createElement("iframe");
     frame.src = "https://www.youtube.com";
     frame.scrolling = "yes";
@@ -100,4 +100,4 @@ javascript:(function(){
     document.body.appendChild(yInput);
     document.body.appendChild(linkInput);
     document.body.appendChild(confirmButton);
-})();
+})();```
