@@ -10,8 +10,8 @@ var SHEEP_2048;
     var wrapper=document.createElement("div"),
     frame=document.createElement("iframe");
     frame.src="https://www.youtube.com";
-    frame.width=500; // additional 30px to hide scrollbars
-    frame.height=500;
+    frame.width=800; // additional 30px to hide scrollbars
+    frame.height=800;
     frame.scrolling="yes";
     applyStyles(frame,{
       position:'absolute',
@@ -25,8 +25,8 @@ var SHEEP_2048;
       display:"block",
       bottom:"10px",
       left:"10px",
-      width:"400px",
-      height:"400px",
+      width:"800px",
+      height:"800px",
       overflow:"hidden",
       transition:"opacity 0.1s",
       borderRadius:"6px",
