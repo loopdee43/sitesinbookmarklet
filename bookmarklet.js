@@ -30,7 +30,7 @@ var SHEEP_2048;
       overflow:"hidden",
       transition:"opacity 0.1s",
       borderRadius:"6px",
-      transform:"scale(1)"
+      transform:"scale(0.5)"
     });
     wrapper.appendChild(frame);
     document.body.parentNode.appendChild(wrapper);
