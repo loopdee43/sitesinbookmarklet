@@ -10,13 +10,11 @@ var SHEEP_2048;
     var wrapper=document.createElement("div"),
     frame=document.createElement("iframe");
     frame.src="https://www.youtube.com";
-    frame.width=800; // additional 30px to hide scrollbars
-    frame.height=800;
     frame.scrolling="yes";
     applyStyles(frame,{
       position:'absolute',
-      top:'-151.5px',
-      left:'-27px',
+      top:'0',
+      left:'0',
       border:"none"
     });
     applyStyles(wrapper,{
@@ -25,15 +23,23 @@ var SHEEP_2048;
       display:"block",
       bottom:"10px",
       left:"10px",
-      width:"800px",
-      height:"800px",
       overflow:"hidden",
       transition:"opacity 0.1s",
       borderRadius:"6px",
-      transform:"scale(0.5)"
+      transform:"scale(1)"
     });
     wrapper.appendChild(frame);
     document.body.parentNode.appendChild(wrapper);
+
+    function resizeIframe() {
+      var contentWidth = frame.contentWindow.document.documentElement.scrollWidth;
+      var contentHeight = frame.contentWindow.document.documentElement.scrollHeight;
+      frame.width = contentWidth + 'px';
+      frame.height = contentHeight + 'px';
+    }
+
+    frame.onload = resizeIframe;
+
     function enter() {wrapper.style.opacity="1";}
     function leave() {wrapper.style.opacity="0";frame.blur();}
     wrapper.addEventListener("mouseenter",enter,false);
